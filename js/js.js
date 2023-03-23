@@ -1,7 +1,8 @@
-
+// Timer
+isSail = false
 $(window).on('load', function() {
   setTimeout(function(){
-    lastDay = 23
+    lastDay = 24
     setInterval(function(){
       time = $('#Moscow_z71d span:first-child').html();
       date = $('#Moscow_z71d span:last-child').html();
@@ -27,6 +28,7 @@ $(window).on('load', function() {
       dayToday = dayMsk
 
       if(dayToday == lastDay) {
+        isSail = false
         return false;
  
         
@@ -35,8 +37,9 @@ $(window).on('load', function() {
         
 
       } else if(dayToday < lastDay) {
+        isSail = true;
         let timer = deadline - currentTime;
- 
+        
         // Перевод в часы, с учетом остатка деления на 24
         let toHours = (Math.floor(timer / 1000 / 60 / 60) % 48);
         // Перевод в минуты, с учетом остатка деления на 60
@@ -54,6 +57,17 @@ $(window).on('load', function() {
 
 
 });
+
+
+// tg button
+$(window).on('load resize', function() {
+  if ($(this).width() < 577) {
+      $('.tg-btn').html("<i class='icon-tg'></i>");
+  } else {
+    $('.tg-btn').html("Telegram chanel");
+  }
+});
+
 // Offer video
 
 const video = $('video')[0]
@@ -106,20 +120,13 @@ $(window).on('load', function() {
   
 });
 
-
-
 // Team slider
 $('.team-slider').slick({
-// centerMode: true,
 infinite: true,
-
 cssEase: 'linear',
-// autoplay: true,
-// autoplaySpeed: 1000,
 
-
-prevArrow: "<i class='icon-slick-arrow prev'></i>",
-nextArrow: "<i class='icon-slick-arrow next'></i>",
+prevArrow: "<i class='icon-arrow prev'></i>",
+          nextArrow: "<i class='icon-arrow next'></i>",
 
 slidesToShow: 4,
 slidesToScroll: 4,
@@ -131,7 +138,7 @@ responsive: [
       slidesToScroll: 3,
     }
   },
-  {
+   {
     breakpoint: 820,
     settings: {
       slidesToShow: 1,
@@ -153,103 +160,122 @@ if ($(this).width() < 820) {
 
 
 
-
-
-
-
 // Students
 $('.students-slider').slick({
-// centerMode: true,
 infinite: true,
-
 cssEase: 'linear',
-// autoplay: true,
-// autoplaySpeed: 1000,
 
 
-prevArrow: "<i class='icon-slick-arrow prev'></i>",
-nextArrow: "<i class='icon-slick-arrow next'></i>",
+prevArrow: "<i class='icon-arrow prev'></i>",
+nextArrow: "<i class='icon-arrow next'></i>",
 
 slidesToShow: 1,
 slidesToScroll: 1,
-// responsive: [
-//   {
-//     breakpoint: 1140,
-//     settings: {
-//       slidesToShow: 3,
-//       slidesToScroll: 3,
-//     }
-//   },
-//   {
-//     breakpoint: 820,
-//     settings: {
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//     }
-//   }],
+responsive: [
+  {
+    breakpoint: 992,
+    settings: {
+    arrows: false,
+    }
+  }
+],
 });
 
 $('.student__btn').on('click', function(){
   if($(this).hasClass('student__btn_active')) {
     $(this).removeClass('student__btn_active')
     $(this).text('more')
+    $(this).css('bottom', '-15px')
     $(this).parent().removeClass('student__content_active')
+
 
   } else {
     $(this).addClass('student__btn_active')
+    $(this).css('bottom', '15px')
     $(this).text('hide')
     $(this).parent().addClass('student__content_active')
   }
   
 });
 
+
 // Prices
 
 $(".prices__tab-swither input").on("change", function(){
+  if (($('input[name="prices-tabs"][value="2"]').is(":checked"))) {
+    $('.tab-swither__bg').addClass('_right')
+    $('.tab-swither__bg').css('width', '180px')
 
+    if($(window).width() < 769) {
+      $('.tab-swither__bg').css('width', '75px')
+      }
+      $('.label_2').css('font-weight', '700')
+      $('.label_1').css('font-weight', '400')
+      $('#tariffs-standard').removeClass('_active');
+      $('#tariffs-vip').addClass('_active');
+    
+      $('#tariffs-standard').addClass('_d-none');
+    
 
+      $('#tariffs-vip').removeClass('_d-none');
+    } else {
+      $('.tab-swither__bg').css('width', '225px')
 
-let a = $(this).attr("id");
-if ($(window).width() < 1150) {
-  $('#tariffs-standard').toggleClass('_active');
-  $('#tariffs-vip').toggleClass('_active');
-
-  $('#tariffs-standard').toggleClass('_d-none');
-
+      if($(window).width() < 769) {
+        $('.tab-swither__bg').css('width', '110px')
+      }
+      $('.tab-swither__bg').removeClass('_right')
+      $('#tariffs-standard').addClass('_active')
+      $('#tariffs-vip').removeClass('_active')
+      $('.label_1').css('font-weight', '700')
+      $('.label_2').css('font-weight', '400')
+      
+    $('#tariffs-standard').removeClass('_d-none');
   
-  
-  $('#tariffs-vip').toggleClass('_d-none');
-} else {
-  $('#tariffs-standard').toggleClass('_active')
-  $('#tariffs-vip').toggleClass('_active')
-
-  $('#tariffs-standard').toggleClass('_d-none');
-
-  
-  
-  $('#tariffs-vip').toggleClass('_d-none');
-  
-};
-
-// $('#tariffs-vip').hide();
-
-// $('#tariffs-standard').toggleClass('_d-none')
-// $('#tariffs-vip').toggleClass('_d-none')
-
+    
+    
+    $('#tariffs-vip').addClass('_d-none');
+    
+    };
 });
+   
+
+setInterval(function(){
+    
+  if(isSail) {
+    $('.new-cost').css('display', 'inline')
+    $('.cost').addClass('cost__cross')
+  
+    } else {
+    
+      $('.new-const').css('display', 'none')
+      $('.cost').removeClass('cost__cross')
+    }
+}, 1000);
+
 
 $(window).on('load', function() {
-  if ($(window).width() < 1150) {
-    // Prices slider
-    // $('#tariffs-standard').addClass("_d-block");
-    // $('#tariffs-vip').addClass("_d-block");
-    $('.prices__slider').slick({
-      cssEase: 'ease',
-      prevArrow: "<i class='icon-slick-arrow prev'></i>",
-      nextArrow: "<i class='icon-slick-arrow next'></i>",
-      // slidesToShow: 2,
-      infinite: false,
-      responsive: [
+
+  if ($(window).width() < 767) {
+    $('.label_1').text('Standard')
+    
+    $('.label_2').text('VIP')
+  } else {
+    $('.label_1').text('Standard packages')
+    
+    $('.label_2').text('VIP packages')
+  }
+});
+
+
+$(window).on('load', function() {
+    if ($(window).width() < 1150) {
+      $('.prices__slider').slick({
+        arrows: false,
+        cssEase: 'ease',
+        slidesToShow: 3,
+        infinite: false,
+        responsive: [
           {
             breakpoint: 768,
             settings: {
@@ -259,94 +285,87 @@ $(window).on('load', function() {
               centerMode: 'true',
             }
           }],
-        });
-      
-
-  } else {
-
-    $('.partners__slider').slick("unslick");
-    // 
-
-    // $('.tariffs__item').removeClass("_a")
-
-  };
-
-
-});
+          });
+    } else {
+    
+      $('.partners__slider').slick("unslick");
+    };
+  
+  
+  });
 
 setTimeout(function () {
-$('#tariffs-vip').delay(1000).addClass('_d-none')
+  
+  $('#tariffs-vip').delay(1000).addClass('_d-none');
+  $('input[name="prices-tabs"][value="1"]').trigger('click');
 }, 2000)
 
-
-if ($(window).width() < 767) {
-  $('.label_1').text('Standard')
-  
-  $('.label_2').text('VIP')
-} else {
-  $('.label_1').text('Standard packages')
-  
-  $('.label_2').text('VIP packages')
-}
-
-
-$(window).on('load resize', function() {
-  if ($(this).width() < 577) {
-      $('.tg-btn').html("<i class='icon-tg'></i>");
-  } else {
-    $('.tg-btn').html("Telegram chanel");
-  }
-});
-
-
-// // $("#projects__content").css("opacity", "0").animate({"opacity": "1"}, 200);
-// for(let i=0; i < projects.length; i++){
-// 	console.log("ya ty1t");
-// 	if(!$(projects[i]).hasClass(a)){
-// 		$(projects[i]).css("display", "none");
-// 		console.log("ya tys1t");
-// 	} else {
-// 		$(projects[i]).css("display", "block");
-// 	}
-// }
 
 
 
 
 
 // Reviews
+if ($(window).width() < 768) {
+  $('.cards_mob__slider').slick({
+    centerMode: true,
+    infinite: true,
+    cssEase: 'ease',
+    slidesToShow: 1,
+  });
+}
 
 $('#reviews__btn').on('click', function() {
-  $('.review-card').appendTo('.cards .container')
-  $('.cards').addClass('cards_active')
+  
+    
+    if($(this).hasClass('reviews__btn_active')) {
+      $(this).text('look closer')
+      $(this).removeClass('reviews__btn_active')
+
+
+      if($(window).width() > 768) {
+        $('.row_1').appendTo('.cards__row_1')
+        $('.row_2').appendTo('.cards__row_2')
+        $('.row_3').appendTo('.cards__row_3')
+      } else {
+        $('.cards_mob__slider').addClass('_d-none')
+        $('.reviews__cards').removeClass('_d-none')
+      }
+        
+
+    } else {
+
+      
+      
+      $(this).addClass('reviews__btn_active')
+
+      if($(window).width() > 768) {
+        $(this).text('hide')
+      $('.cards').addClass('cards_active')
+      $('.review-card').appendTo('.cards__container')
+      } else {
+        $(this).text('back')
+        $('.reviews__cards').addClass('_d-none')
+        $('.cards_mob__slider').removeClass('_d-none')
+      }
+    }  
   });
 
+  setTimeout(function () {
+  
+    $('.cards_mob__slider').delay(1000).addClass('_d-none');
+  }, 2000)
 
 $(window).on('load', function() {
   if ($(window).width() < 768) {
-    // Offer btn
     
     $('#reviews__btn').on('click', function() {
+      
       setTimeout(function(){
-        console.log('sssdad3we12')
-        $('reviews__slider').slick({
-          centerMode: true,
-          infinite: true,
-          
-          cssEase: 'ease',
-          autoplay: true,
-          autoplaySpeed: 1000,
-          
-  
-          prevArrow: "<i class='icon-slick-arrow prev'></i>",
-          nextArrow: "<i class='icon-slick-arrow next'></i>",
-  
-          slidesToShow: 1,
-        });
+        
       }, 1000)
       
     });
-    // Partners slider
       
     }
   });

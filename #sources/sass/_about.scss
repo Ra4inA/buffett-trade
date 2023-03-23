@@ -23,9 +23,7 @@
     
     &__title {
         margin-bottom: 120px;
-        text-align: left;
-        
-        
+        text-align: left;   
     }
     &__content {
         max-width: 740px;
@@ -64,9 +62,6 @@
         &__title {
             text-align: left;
             margin-bottom: 200px;
-            // text-align: justify;
-        
-        
         }
 
         &__content {
@@ -83,5 +78,4 @@
             }
         }
     }
-    
 }

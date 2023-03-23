@@ -14,20 +14,30 @@
     }
 
     &__cards {
+        
+        max-width: 2150px;
+        margin: 0 auto;
         margin-bottom: 36px;
     }
 
     &__btn {
         font-weight: 400;
         line-height: 24px;
-        padding: 5px 30px;
+        padding: 17px 30px;
         display: block;
         margin: 0 auto;
+        width: 196px;
         
     }
+
+    &__slider {
+        .slick-arrow {
+            font-size: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
 }
-
-
 
 
 .cards {
@@ -35,7 +45,7 @@
     flex-direction: column;
 
     &_active {
-        .container {
+        .cards__container {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -58,9 +68,7 @@
                     margin-left: 30px;
                 }
             }
-                
-                
-            
+
         }
         
     }
@@ -102,11 +110,57 @@
     }
 }
 
+.cards_mob {
+    &__slider {
+        .slick-arrow {
+            font-size: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+}
+
+
+
+.cards__item_mob-wrapper {
+    &:nth-child(2n) {
+        .review-card-mob__img-wrapper_short {
+            order: -1;
+        }
+    }
+
+}
+.cards__item_mob {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    
+}
+.review-card-mob__img-wrapper {
+    margin: 20px;
+    
+
+}
+.review-card-mob__img-wrapper_long {
+    flex: 0 1 calc(40% - 15px);
+    margin-right: 15px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+
+.review-card-mob__img-wrapper_short {
+    flex: 1 1 100%;
+    margin-top: 20px;
+    
+}
+
 .review-card {
     display: flex;
     justify-content: space-between;
-    // flex: 0 1 50%;
-    // max-width: calc(50% - 27px);
     width: 100%;
     max-width: 500px;
     max-height: 375px;
@@ -143,14 +197,37 @@
 
 
 
-.review-card-colunm {
-}
-
-
-
 @media screen and (max-width: 768px) {
+    .reviews {
+        padding: 42px 0 55px 0;
+    }
+
+
+    
+    .cards_active .container .review-card:nth-child(2n) {
+        margin-right: 35px;
+      }
+
+      .cards__container .review-card:nth-child(4n+3),
+      .cards__container .review-card:nth-child(4n+4) {
+        .cards__container  .review-card__column_1 {
+                  order: 1;
+                  margin-right: 35px;
+                  margin-left: 30px;
+              }
+          }
+
+          .cards_active .container .review-card:nth-child(4n+3) .review-card__column_1, 
+          .cards_active .container .review-card:nth-child(4n+4) .review-card__column_1 {
+            order: 1;
+
+          }
+
+          
     .cards__item {
-        margin-right: 30px;
+        margin: 0px 5px 0 25px;
+        display: flex !important;
+        max-width: 100%;
     }
     .cards__row {
         margin-bottom: 11px;
