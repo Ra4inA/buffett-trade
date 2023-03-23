@@ -12,78 +12,233 @@
     <title>Buffett Trade</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
     
 
+<!-- Offer -->
+<section id="offer" class="section offer">
+    <div class="container offer__container">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="logo">
+                    <a href="" class="logo__link">
+                        <div class="img-wrapper logo__wrapper">
+                            <img src="img/logo.png" alt="Buffett Trade" class="logo__img">
+                        </div>
+                    </a>
+                    
+                </li>
+                
+                <li class="tg-btn-wrapper">
+                    <a href="https://t.me/buffet_trades" class="tg-btn"> 
+                        Telegram channel
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-<section class="section partners">
-    <h2 class="partners__title">
+        <div class="offer__row">
+            <div class="offer__content">
+                <h1 class="section-title offer__title">
+                    We will pay you <br> the money in any <br> situation if the signal was negative.
+                </h1>
+                <div class="offer__content">
+                    <p class="offer__text">We have been on the market for over 10 years and are the only company that is fully responsible for your funds and guarantees a refund from negative signals. <br> Regardless of what caused it, we take all the risks on ourselves.</p>
+                    <p class="offer__text">This all works perfectly because with each transaction, we set aside a portion of the funds into an insurance fund. In this way, we create a safety cushion for our clients and ourselves, and in the event of any unforeseen situations in the market, you will always receive compensation.</p>    
+                </div>
+                <a href="#advantages" class="btn offer__btn">Find out more</a>
+            </div>
+            <div class="offer__video video">
+                <div id="offerVideoPlay" class="video__play">
+                    <i class="icon-play"></i>
+                </div>
+                <video id="offerVideo" class="img" poster="img/about-container-bg.jpg" src="img/offer-video.webm">
+                    
+                </video>
+                <a href="#prices" class="btn video__btn">
+                    I am ready
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Partners -->
+<section id="partners" class="section partners">
+    <h2 class="section-title partners__title">
         Trusted by thousands of people and companies worldwide
     </h2>
-    <ul class="partners-list partners__list">
+
+ <!--   <li class="partners-list__item">
+        <div class="img-wrapper partners-list__img-wrapper">
+            <img src="img/partner1.png" alt="" class="img img-wrapper__img">
+        </div>
+    </li> -->
+    
+    
+    <ul class="partners-list partners__list partners__slider">
         <li class="partners-list__item">
-            <!-- <div class="img-wrapper partners-list__img-wrapper"> -->
-                <img src="img/partner1.png" alt="" class="img img-wrapper__img">
-            <!-- </div> -->
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner1.png" alt="" class="img partners-list__img">
+            </div>   
+        </li>
+
+        <li class="partners-list__item">
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner2.png" alt="" class="img partners-list__img">
+            </div>   
+        </li>
+
+        <li class="partners-list__item">
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner3.png" alt="" class="img partners-list__img">
+            </div>   
+        </li>
+
+        <li class="partners-list__item">
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner4.png" alt="" class="img partners-list__img">
+            </div>   
         </li>
         <li class="partners-list__item">
-            <!-- <div class="img-wrapper partners-list__img-wrapper"> -->
-                <img src="img/partner1.png" alt="" class="img img-wrapper__img">
-            <!-- </div> -->
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner5.png" alt="" class="img partners-list__img">
+            </div>   
         </li>
         <li class="partners-list__item">
-            <!-- <div class="img-wrapper partners-list__img-wrapper"> -->
-                <img src="img/partner1.png" alt="" class="img img-wrapper__img">
-            <!-- </div> -->
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner6.png" alt="" class="img partners-list__img">
+            </div>   
         </li>
         <li class="partners-list__item">
-            <!-- <div class="img-wrapper partners-list__img-wrapper"> -->
-                <img src="img/partner1.png" alt="" class="img img-wrapper__img">
-            <!-- </div> -->
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner7.png" alt="" class="img partners-list__img">
+            </div>   
         </li>
         <li class="partners-list__item">
-            <!-- <div class="img-wrapper partners-list__img-wrapper"> -->
-                <img src="img/partner1.png" alt="" class="img img-wrapper__img">
-            <!-- </div> -->
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner8.png" alt="" class="img partners-list__img">
+            </div>   
         </li>
+
         <li class="partners-list__item">
-            <!-- <div class="img-wrapper partners-list__img-wrapper"> -->
-                <img src="img/partner1.png" alt="" class="img img-wrapper__img">
-            <!-- </div> -->
+            <div class="img-wrapper partners-list__img-wrapper">
+                <img src="img/partner9.png" alt="" class="img partners-list__img">
+            </div>   
         </li>
-        <li class="partners-list__item">
-            <!-- <div class="img-wrapper partners-list__img-wrapper"> -->
-                <img src="img/partner1.png" alt="" class="img img-wrapper__img">
-            <!-- </div> -->
-        </li>
-        <li class="partners-list__item">
-            <!-- <div class="img-wrapper partners-list__img-wrapper"> -->
-                <img src="img/partner1.png" alt="" class="img img-wrapper__img">
-            <!-- </div> -->
-        </li>
+
     </ul>
 </section>
+<!-- About -->
+<section id="about" class="section about">
+    <div class="container about__container">
+        <h2 class="section-title about__title">
+            Buffett Trade is not just a trading company, but years of experience in the investment field.
+        </h2>
+
+        <div class="about__content">
+            <p class="about__text">
+                We have analyzed every single trade Warren Buffett has ever made in his life and applied all his experience to the cryptocurrency market, creating a trading system that allows us to grow our own and our clients' funds year after year, regardless of the market phase.
+            </p>
+            <p class="about__text">
+                Thanks to our large team of employees, which currently comprises over 25 traders and analysts, you will start earning and gaining knowledge about how the cryptocurrency market works from day one.
+            </p>
+        </div>
+    </div>
+</section>
 <!-- Team -->
-<section class="section team">
-    <div class="container">
+<section id="students" class="section team">
+    <div class="container team__container">
+        <h2 class="section-title team__title team__title_no-slide _d-none">
+            Team
+        </h2>
         <ul class="team-slider team__slider">
-            <h2 class="team-slider__item section__title team__title">
+            <h2 class="team-slider__item section-title team__title">
                 Team
             </h2>
-            <li class="team-slider__item team-member">
-                <div class="img-wrapper team-member__img-wrapper">
-                    <img src="img/team-member1.jpg" alt="" class="img img-wrapper__img">
+            <li class="team-slider__item">
+                <div class="team-member">
+                    <div class="img-wrapper team-member__img-wrapper">
+                        <img src="img/team-member1.jpg" alt="John Smith" class="img img-wrapper__img">
+                    </div>
+                    <div class="team-member__post">Portfolio Manager</div>
+                    <div class="h3 team-member__name">John Smith</div>
+                    <p class="team-member__interview">John has over 10 years of experience in cryptocurrency trading, having previously worked as a senior trader at Goldman Sachs. He is an expert in technical analysis and has a proven track record of delivering strong returns for his clients.</p>
+    
                 </div>
-                <div class="team-member__post">Portfolio Manager</div>
-                <div class="h3 team-member__name">John Smith</div>
-                <p class="team-member__interview">John has over 10 years of experience in cryptocurrency trading, having previously worked as a senior trader at Goldman Sachs. He is an expert in technical analysis and has a proven track record of delivering strong returns for his clients.</p>
             </li>
+
+            <li class="team-slider__item">
+                <div class="team-member">
+                    <div class="img-wrapper team-member__img-wrapper">
+                        <img src="img/team-member1.jpg" alt="John Smith" class="img img-wrapper__img">
+                    </div>
+                    <div class="team-member__post">Portfolio Manager</div>
+                    <div class="h3 team-member__name">John Smith</div>
+                    <p class="team-member__interview">John has over 10 years of experience in cryptocurrency trading, having previously worked as a senior trader at Goldman Sachs. He is an expert in technical analysis and has a proven track record of delivering strong returns for his clients.</p>
+    
+                </div>
+            </li>
+
+
+            <li class="team-slider__item">
+                <div class="team-member">
+                    <div class="img-wrapper team-member__img-wrapper">
+                        <img src="img/team-member1.jpg" alt="John Smith" class="img img-wrapper__img">
+                    </div>
+                    <div class="team-member__post">Portfolio Manager</div>
+                    <div class="h3 team-member__name">John Smith</div>
+                    <p class="team-member__interview">John has over 10 years of experience in cryptocurrency trading, having previously worked as a senior trader at Goldman Sachs. He is an expert in technical analysis and has a proven track record of delivering strong returns for his clients.</p>
+    
+                </div>
+            </li>
+
+            <li class="team-slider__item">
+                <div class="team-member">
+                    <div class="img-wrapper team-member__img-wrapper">
+                        <img src="img/team-member1.jpg" alt="John Smith" class="img img-wrapper__img">
+                    </div>
+                    <div class="team-member__post">Portfolio Manager</div>
+                    <div class="h3 team-member__name">John Smith</div>
+                    <p class="team-member__interview">John has over 10 years of experience in cryptocurrency trading, having previously worked as a senior trader at Goldman Sachs. He is an expert in technical analysis and has a proven track record of delivering strong returns for his clients.</p>
+    
+                </div>
+            </li>
+
+            <li class="team-slider__item">
+                <div class="team-member">
+                    <div class="img-wrapper team-member__img-wrapper">
+                        <img src="img/team-member1.jpg" alt="John Smith" class="img img-wrapper__img">
+                    </div>
+                    <div class="team-member__post">Portfolio Manager</div>
+                    <div class="h3 team-member__name">John Smith</div>
+                    <p class="team-member__interview">John has over 10 years of experience in cryptocurrency trading, having previously worked as a senior trader at Goldman Sachs. He is an expert in technical analysis and has a proven track record of delivering strong returns for his clients.</p>
+    
+                </div>
+            </li>
+            <li class="team-slider__item">
+                <div class="team-member">
+                    <div class="img-wrapper team-member__img-wrapper">
+                        <img src="img/team-member1.jpg" alt="John Smith" class="img img-wrapper__img">
+                    </div>
+                    <div class="team-member__post">Portfolio Manager</div>
+                    <div class="h3 team-member__name">John Smith</div>
+                    <p class="team-member__interview">John has over 10 years of experience in cryptocurrency trading, having previously worked as a senior trader at Goldman Sachs. He is an expert in technical analysis and has a proven track record of delivering strong returns for his clients.</p>
+    
+                </div>
+            </li>
+            
+
+
+        
         </ul>
     </div>
 </section>
 <!-- Counts -->
-<section class="section counts">
+<section id="counts" class="section counts">
     <ul class="container counts__list">
         <li class="counts__item count count_yellow">
             <div class="count__number">101,934</div>
@@ -105,8 +260,7 @@
     </ul>
 </section>
 <!-- Advantages -->
-
-<section class="section advantages">
+<section id="advantages" class="section advantages">
     <div class="container advantages__container">
         <h2 class="section-title advantages__title">
             Unique advantages
@@ -115,7 +269,7 @@
         <ul class="advantages__list advantages-list">
             <li class="advantages-list__item advantage">
                 <div class="advantage__icon">
-                    <i class="icon-study">s</i>
+                    <img src="img/advantages1.png">
                 </div>
                 <div class="advantage__content">
                     <h3 class="subtitle advantage__title">
@@ -129,7 +283,7 @@
 
             <li class="advantages-list__item advantage">
                 <div class="advantage__icon">
-                    <i class="icon-coin">s</i>
+                    <img src="img/advantages2.png">
                 </div>
 
                 <div class="advantage__content">
@@ -144,7 +298,7 @@
 
             <li class="advantages-list__item advantage">
                 <div class="advantage__icon">
-                    <i class="icon-gears">s</i>
+                    <img src="img/advantages3.png">
                 </div>
 
                 <div class="advantage__content">
@@ -159,7 +313,7 @@
 
             <li class="advantages-list__item advantage">
                 <div class="advantage__icon">
-                    <i class="icon-contract">s</i>
+                    <img src="img/advantages4.png">
                 </div>
 
                 <div class="advantage__content">
@@ -169,7 +323,7 @@
                     <p class="advantage__text">
                         We conclude a contract with all our clients and send the original to any part of the world, which serves as proof that we are obliged to fulfill all obligations on our part and provide services of the highest quality.            
                     </p>
-                    <a href="#" class="btn advantages__btn">View contract</a>
+                    <a href="#" class="btn advantage__btn">View contract</a>
                 </div>
             </li>
         </ul>
@@ -177,122 +331,539 @@
     </div>
 </section>
 <!-- Students -->
-<section class="section students">
-    <div class="contianer">
+<section id="students" class="section students">
+    <div class="container students__container">
         <h2 class="section-title students__title">
             Stories of our students
         </h2>
-        <ul class="slider students__slider">
+        <ul class="slider students-slider students__slider">        
+            <li class="students-slider__item">
+                <div class="student">
+                    <div class="student__photo">
+                        
+                        <div class="img-wrapper">
+                            <img src="img/student1.jpg" alt="Rahim" class="img">
+                        </div>
+                        <span class="student__name">Rahim</span>
+                    </div>
+                    <div class="student__content">
+                        <h3 class="subtitle student__subtitle">After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result.</h3>
+                        <p class="student__text">
+                            Rahim was born in the slums of Mumbai, India. His first message was, "Please, can I have one free signal?" to which we naturally declined as we are a commercial organization, not a church. After that, he disappeared for a week. Then, he managed to find the money and bought a discounted subscription for one month. I don't remember how much it cost, but I do remember he had only $50 left for trading. It was a risky decision, wasn't it? After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result. Five years later, he is one of our fund's investors and has earned more than $100,000 during that time. 
+                        </p>
+                        <p class="student__text">
+                            Here's his telegram - he loves sharing his experience with newcomers.
+                        </p>
 
-        
-            <li class="students-slider__item student">
-                <div class="student__photo img-wrapper">
-                    <img src="img/student1.jpg" alt="Rahim" class="img">
-                </div>
-                <div class="student__content">
-                    <h3 class="subtitle student__subtitle">After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result.</h3>
-                    <p class="student__text">
-                        Rahim was born in the slums of Mumbai, India. His first message was, "Please, can I have one free signal?" to which we naturally declined as we are a commercial organization, not a church. After that, he disappeared for a week. Then, he managed to find the money and bought a discounted subscription for one month. I don't remember how much it cost, but I do remember he had only $50 left for trading. It was a risky decision, wasn't it? After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result. Five years later, he is one of our fund's investors and has earned more than $100,000 during that time. 
-                    </p>
-                    <p class="student__text">
-                        Here's his telegram - he loves sharing his experience with newcomers.
-                    </p>
+                        <span class="student__btn">read more</span>
+                    </div>
                 </div>
             </li>
 
-            <li class="students-slider__item student">
-                <div class="student__photo img-wrapper">
-                    <img src="img/student1.jpg" alt="Rahim" class="img">
-                </div>
-                <div class="student__content">
-                    <h3 class="subtitle student__subtitle">After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result.</h3>
-                    <p class="student__text">
-                        Rahim was born in the slums of Mumbai, India. His first message was, "Please, can I have one free signal?" to which we naturally declined as we are a commercial organization, not a church. After that, he disappeared for a week. Then, he managed to find the money and bought a discounted subscription for one month. I don't remember how much it cost, but I do remember he had only $50 left for trading. It was a risky decision, wasn't it? After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result. Five years later, he is one of our fund's investors and has earned more than $100,000 during that time. 
-                    </p>
-                    <p class="student__text">
-                        Here's his telegram - he loves sharing his experience with newcomers.
-                    </p>
+            <li class="students-slider__item">
+                <div class="student">
+                    <div class="student__photo">
+                        
+                        <div class="img-wrapper">
+                            <img src="img/student1.jpg" alt="Rahim" class="img">
+                        </div>
+                        <span class="student__name">Rahim</span>
+                    </div>
+                    <div class="student__content">
+                        <h3 class="subtitle student__subtitle">After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result.</h3>
+                        <p class="student__text">
+                            Rahim was born in the slums of Mumbai, India. His first message was, "Please, can I have one free signal?" to which we naturally declined as we are a commercial organization, not a church. After that, he disappeared for a week. Then, he managed to find the money and bought a discounted subscription for one month. I don't remember how much it cost, but I do remember he had only $50 left for trading. It was a risky decision, wasn't it? After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result. Five years later, he is one of our fund's investors and has earned more than $100,000 during that time. 
+                        </p>
+                        <p class="student__text">
+                            Here's his telegram - he loves sharing his experience with newcomers.
+                        </p>
+
+                        <span class="student__btn">read more</span>
+                    </div>
                 </div>
             </li>
+            <li class="students-slider__item">
+                <div class="student">
+                    <div class="student__photo">
+                        
+                        <div class="img-wrapper">
+                            <img src="img/student1.jpg" alt="Rahim" class="img">
+                        </div>
+                        <span class="student__name">Rahim</span>
+                    </div>
+                    <div class="student__content">
+                        <h3 class="subtitle student__subtitle">After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result.</h3>
+                        <p class="student__text">
+                            Rahim was born in the slums of Mumbai, India. His first message was, "Please, can I have one free signal?" to which we naturally declined as we are a commercial organization, not a church. After that, he disappeared for a week. Then, he managed to find the money and bought a discounted subscription for one month. I don't remember how much it cost, but I do remember he had only $50 left for trading. It was a risky decision, wasn't it? After a month, he sent us a screenshot of his balance, which was $5000, and that's what we call a result. Five years later, he is one of our fund's investors and has earned more than $100,000 during that time. 
+                        </p>
+                        <p class="student__text">
+                            Here's his telegram - he loves sharing his experience with newcomers.
+                        </p>
+
+                        <span class="student__btn">read more</span>
+                    </div>
+                </div>
+            </li>
+            
         </ul>
     </div>
 </section>
 <!-- Prices -->
-<section class="section prices">
+<section id="prices" class="section prices">
     <div class="container">
-        <header class="prises__header">
-            <div class="prices__timer"></div>
+        <header class="prices__header">
+            <div class="prices__timer timer">
+                <span id="timer" class="timer__time"> 00:00:00 </span>
+                <span class="timer__text">Monthly Discount for new users</span>
+            </div>
             <h2 class="section-title prices__title">
                 Prices
             </h2>
-            <input type="checkbox" id="prices-checkbpox" class="prices__tab-checkbox">
-            <label for="ection-checkbpox" class="prices__tab-swither">
-                <span></span>
-                <span></span>
+            <div class="prices__tab-swither tab-swither">
+                <input  class="tab-swither__ratio tab-swither__ratio_active" type="radio" id="prices-checkbox-standard" name="prices-tabs"><label class="tab-swither__label label_1" for="prices-checkbox-standard">Standard packages</label>
+                <input checked="" class="tab-swither__ratio" type="radio" id="prices-checkbox-vip" name="prices-tabs"><label class="tab-swither__label label_2" for="prices-checkbox-vip">VIP packages</label>
+            </div>
             </label>
         </header>
+        <div class="tariffs" id="tariffs">
+            <div class="prices__tabs prices-tabs">
 
-        <ul class="prices__tabs prices-tabs">
-            <li class="prices-tabs__item tariff">
-                <h3 class="tariff__title">1 Month</h3>
-                <ul class="tariff__list tariff-list">
-                    <li class="tariff-list__item">
-                        Futures signals for USDT pairs
+                    <ul class="prices-tab tariffs__item prices__slider prices__slider_1 _active-flex" id="tariffs-standard">
+                        <li class="tariff tariff_gray tariff-tabs__item">
+                            <h3 class="tariff__title">1 Month</h3>
+                            <ul class="tariff__list tariff-list">
+                                <li class="tariff-list__item">
+                                    Futures signals for USDT pairs
+                                </li>
+                                <li class="tariff-list__item">
+                                    3-5 signals per day
+                                </li>
+                                <li class="tariff-list__item">
+                                    Technical analysis
+                                </li>
+                                <li class="tariff-list__item">
+                                    Entry, take profit, and stop loss zones provided
+                                </li>
+                                <li class="tariff-list__item">
+                                    Training in trading strategies
+                                </li>
+                                <li class="tariff-list__item">
+                                    Training module for beginners
+                                </li>
+                                <li class="tariff-list__item">
+                                    Average monthly profit of up to 700%
+                                </li>
+                                <li class="tariff-list__item">
+                                    60% material responsibility
+                                </li>
+                            </ul>
+                            <div class="tariff__cost">$450</div>
+                            <a href='' class="tariff__btn">
+                                JOIN NOW
+                            </a>
+                        </li>
+            
+                        <li class="tariff tariff_blue tariff-tabs__item">
+                            <h3 class="tariff__title">1 Month</h3>
+                            <ul class="tariff__list tariff-list">
+                                <li class="tariff-list__item">
+                                    Futures signals for USDT pairs
+                                </li>
+                                <li class="tariff-list__item">
+                                    3-5 signals per day
+                                </li>
+                                <li class="tariff-list__item">
+                                    Technical analysis
+                                </li>
+                                <li class="tariff-list__item">
+                                    Entry, take profit, and stop loss zones provided
+                                </li>
+                                <li class="tariff-list__item">
+                                    Training in trading strategies
+                                </li>
+                                <li class="tariff-list__item">
+                                    Training module for beginners
+                                </li>
+                                <li class="tariff-list__item">
+                                    Average monthly profit of up to 700%
+                                </li>
+                                <li class="tariff-list__item">
+                                    60% material responsibility
+                                </li>
+                            </ul>
+                            <div class="tariff__cost">$450</div>
+                            <a href='' class="tariff__btn">
+                                JOIN NOW
+                            </a>
+                        </li>
+            
+                        <li class="tariff tariff_orange tariff-tabs__item">
+                            <h3 class="tariff__title">1 Month</h3>
+                            <ul class="tariff__list tariff-list">
+                                <li class="tariff-list__item">
+                                    Futures signals for USDT pairs
+                                </li>
+                                <li class="tariff-list__item">
+                                    3-5 signals per day
+                                </li>
+                                <li class="tariff-list__item">
+                                    Technical analysis
+                                </li>
+                                <li class="tariff-list__item">
+                                    Entry, take profit, and stop loss zones provided
+                                </li>
+                                <li class="tariff-list__item">
+                                    Training in trading strategies
+                                </li>
+                                <li class="tariff-list__item">
+                                    Training module for beginners
+                                </li>
+                                <li class="tariff-list__item">
+                                    Average monthly profit of up to 700%
+                                </li>
+                                <li class="tariff-list__item">
+                                    60% material responsibility
+                                </li>
+                            </ul>
+                            <div class="tariff__cost">$450</div>
+                            <a href='' class="tariff__btn">
+                                JOIN NOW
+                            </a>
+                        </li>
+                    </ul>
+
+                
+
+                    <ul class="tariffs__item prices-tab prices__slider prices__slider_2" id="tariffs-vip">
+                    <li class="tariff-tabs__item tariff-tabs__item_small tariff tariff_gray">
+                        <h3 class="tariff__title">1 Month</h3>
+                        <ul class="tariff__list tariff-list">
+                            <li class="tariff-list__item">
+                                Futures signals for USDT pairs
+                            </li>
+                            <li class="tariff-list__item">
+                                3-5 signals per day
+                            </li>
+                            <li class="tariff-list__item">
+                                Technical analysis
+                            </li>
+                            <li class="tariff-list__item">
+                                Entry, take profit, and stop loss zones provided
+                            </li>
+                            <li class="tariff-list__item">
+                                Training in trading strategies
+                            </li>
+                            <li class="tariff-list__item">
+                                Training module for beginners
+                            </li>
+                            <li class="tariff-list__item">
+                                Average monthly profit of up to 700%
+                            </li>
+                            <li class="tariff-list__item">
+                                60% material responsibility
+                            </li>
+                        </ul>
+                        <div class="tariff__cost">$450</div>
+                        <a href='' class="tariff__btn">
+                            JOIN NOW
+                        </a>
                     </li>
-                    <li class="tariff-list__item">
-                        3-5 signals per day
+                
+                    <li class="tariff-tabs__item tariff-tabs__item_small tariff tariff_blue">
+                        <h3 class="tariff__title">1 Month</h3>
+                        <ul class="tariff__list tariff-list">
+                            <li class="tariff-list__item">
+                                Futures signals for USDT pairs
+                            </li>
+                            <li class="tariff-list__item">
+                                3-5 signals per day
+                            </li>
+                            <li class="tariff-list__item">
+                                Technical analysis
+                            </li>
+                            <li class="tariff-list__item">
+                                Entry, take profit, and stop loss zones provided
+                            </li>
+                            <li class="tariff-list__item">
+                                Training in trading strategies
+                            </li>
+                            <li class="tariff-list__item">
+                                Training module for beginners
+                            </li>
+                            <li class="tariff-list__item">
+                                Average monthly profit of up to 700%
+                            </li>
+                            <li class="tariff-list__item">
+                                60% material responsibility
+                            </li>
+                        </ul>
+                        <div class="tariff__cost">$450</div>
+                        <a href='' class="tariff__btn">
+                            JOIN NOW
+                        </a>
                     </li>
-                    <li class="tariff-list__item">
-                        Technical analysis
+                
+                    <li class="tariff-tabs__item tariff-tabs__item_small tariff tariff_orange">
+                        <h3 class="tariff__title">1 Month</h3>
+                        <ul class="tariff__list tariff-list">
+                            <li class="tariff-list__item">
+                                Futures signals for USDT pairs
+                            </li>
+                            <li class="tariff-list__item">
+                                3-5 signals per day
+                            </li>
+                            <li class="tariff-list__item">
+                                Technical analysis
+                            </li>
+                            <li class="tariff-list__item">
+                                Entry, take profit, and stop loss zones provided
+                            </li>
+                            <li class="tariff-list__item">
+                                Training in trading strategies
+                            </li>
+                            <li class="tariff-list__item">
+                                Training module for beginners
+                            </li>
+                            <li class="tariff-list__item">
+                                Average monthly profit of up to 700%
+                            </li>
+                            <li class="tariff-list__item">
+                                60% material responsibility
+                            </li>
+                        </ul>
+                        <div class="tariff__cost">$450</div>
+                        <a href='' class="tariff__btn">
+                            JOIN NOW
+                        </a>
                     </li>
-                    <li class="tariff-list__item">
-                        Entry, take profit, and stop loss zones provided
+
+                    <li class="tariff-tabs__item tariff-tabs__item_small tariff tariff_pink">
+                        <h3 class="tariff__title">1 Month</h3>
+                        <ul class="tariff__list tariff-list">
+                            <li class="tariff-list__item">
+                                Futures signals for USDT pairs
+                            </li>
+                            <li class="tariff-list__item">
+                                3-5 signals per day
+                            </li>
+                            <li class="tariff-list__item">
+                                Technical analysis
+                            </li>
+                            <li class="tariff-list__item">
+                                Entry, take profit, and stop loss zones provided
+                            </li>
+                            <li class="tariff-list__item">
+                                Training in trading strategies
+                            </li>
+                            <li class="tariff-list__item">
+                                Training module for beginners
+                            </li>
+                            <li class="tariff-list__item">
+                                Average monthly profit of up to 700%
+                            </li>
+                            <li class="tariff-list__item">
+                                60% material responsibility
+                            </li>
+                        </ul>
+                        <div class="tariff__cost">$450</div>
+                        <a href='' class="tariff__btn">
+                            JOIN NOW
+                        </a>
                     </li>
-                    <li class="tariff-list__item">
-                        Training in trading strategies
-                    </li>
-                    <li class="tariff-list__item">
-                        Training module for beginners
-                    </li>
-                    <li class="tariff-list__item">
-                        Average monthly profit of up to 700%
-                    </li>
-                    <li class="tariff-list__item">
-                        60% material responsibility
-                    </li>
-                </ul>
-                <div class="tariff__cost">$450</div>
-                <a href='' class="tariff__btn">
-                    JOIN NOW
-                </a>
-            </li>
-        </ul>
+
+                    </ul>
+
+            </div>
+        </div>
+       
         <p class="prices__signature">
             At the moment, the standard package does not include the ability to write in our community. This option can be purchased for an additional fee of $500
         </p>
     </div>
 </section>
+
+
+
+<!-- Time.is -->
+<div class="time">
+    <a href="https://time.is/Moscow" id="time_is_link" rel="nofollow" style="font-size:36px">Москва:</a>
+<span id="Moscow_z71d" style="font-size:36px"></span>
+</div>
+
+
+
+                    
 <!-- Reviews -->
+<section id="reviews" class="section reviews">
+    <div class="container reviews__container">
+        <h2 class="section-title reviews__title">
+            Reviews from our clients
+        </h2>
+        <p class="reviews__text">
+            Over 6000 positive reviews from people who use their capital wisely entire slide in screenshots.
+        </p>
+    </div>
+    
+        
+    <div class="cards reviews__cards">
+        <div class="container reviews__slider"></div>
+        <ul class="cards__row cards__row_1">
+            <li class="cards__item review-card">
+                <div class="review-card__column review-card__column_1">
+                    <div class="img-wrapper review-card__img-wrapper_long">
+                        <img class="img" src="img/review1.jpg" alt="review">
+                    </div>
+                </div>
+                <div class="review-card__column review-card__column_2">
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review2.jpg" alt="review">
+                    </div>
 
-<section class="section reviews">
-    <h2 class="section-title reviews__title">
-        Reviews from our clients
-    </h2>
-    <p class="reviews__text">
-        Over 6000 positive reviews from people who use their capital wisely entire slide in screenshots.
-    </p>
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review3.jpg" alt="review">
+                    </div>
+                </div>
+            </li>
+            <li class="cards__item review-card">
+                <div class="review-card__column review-card__column_1">
+                    <div class="img-wrapper review-card__img-wrapper_long">
+                        <img class="img" src="img/review1.jpg" alt="review">
+                    </div>
+                </div>
+                <div class="review-card__column review-card__column_2">
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review2.jpg" alt="review">
+                    </div>
+
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review3.jpg" alt="review">
+                    </div>
+                </div>
+            </li>
+
+            <li class="cards__item review-card">
+                <div class="review-card__column review-card__column_1">
+                    <div class="img-wrapper review-card__img-wrapper_long">
+                        <img class="img" src="img/review1.jpg" alt="review">
+                    </div>
+                </div>
+                <div class="review-card__column review-card__column_2">
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review2.jpg" alt="review">
+                    </div>
+
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review3.jpg" alt="review">
+                    </div>
+                </div>
+            </li>
+
+            <li class="cards__item review-card">
+                <div class="review-card__column review-card__column_1">
+                    <div class="img-wrapper review-card__img-wrapper_long">
+                        <img class="img" src="img/review1.jpg" alt="review">
+                    </div>
+                </div>
+                <div class="review-card__column review-card__column_2">
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review2.jpg" alt="review">
+                    </div>
+
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review3.jpg" alt="review">
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+
+        <ul class="cards__row cards__row_2">
+            <li class="cards__item review-card">
+                <div class="review-card__column review-card__column_1">
+                    <div class="img-wrapper review-card__img-wrapper_long">
+                        <img class="img" src="img/review1.jpg" alt="review">
+                    </div>
+                </div>
+                <div class="review-card__column review-card__column_2">
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review2.jpg" alt="review">
+                    </div>
+
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review3.jpg" alt="review">
+                    </div>
+                </div>
+            </li>
+            <li class="cards__item review-card">
+                <div class="review-card__column review-card__column_1">
+                    <div class="img-wrapper review-card__img-wrapper_long">
+                        <img class="img" src="img/review1.jpg" alt="review">
+                    </div>
+                </div>
+                <div class="review-card__column review-card__column_2">
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review2.jpg" alt="review">
+                    </div>
+
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review3.jpg" alt="review">
+                    </div>
+                </div>
+            </li>
+
+            <li class="cards__item review-card">
+                <div class="review-card__column review-card__column_1">
+                    <div class="img-wrapper review-card__img-wrapper_long">
+                        <img class="img" src="img/review1.jpg" alt="review">
+                    </div>
+                </div>
+                <div class="review-card__column review-card__column_2">
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review2.jpg" alt="review">
+                    </div>
+
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review3.jpg" alt="review">
+                    </div>
+                </div>
+            </li>
+
+            <li class="cards__item review-card">
+                <div class="review-card__column review-card__column_1">
+                    <div class="img-wrapper review-card__img-wrapper_long">
+                        <img class="img" src="img/review1.jpg" alt="review">
+                    </div>
+                </div>
+                <div class="review-card__column review-card__column_2">
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review2.jpg" alt="review">
+                    </div>
+
+                    <div class="img-wrapper review-card__img-wrapper_short">
+                        <img class="img" src="img/review3.jpg" alt="review">
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+        
+
+        
 
 
-    <!-- грид или флекс? -->
-    <ul class="reviews__list reviews-list">
-        <li class="reviews-list__cards">
-            <div class="review-card">
-
-            </div>
-        </li>
-    </ul>
+    </div>
+    
+    <a id='reviews__btn' class="btn reviews__btn">
+        look closer
+    </a>
 </section>
-
+    <script src="//widget.time.is/t.js"></script>
+    
+    <!-- Time is -->
+    <script src="//widget.time.is/ru.js"></script>
+<script>
+time_is_widget.init({Moscow_z71d:{template:"TIME<br>DATE", date_format:"year-monthnum-daynum"}});
+</script>
     <!-- JQuery -->
     <script
 		  src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -304,6 +875,8 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- main.js -->
-    <script src="js/main.js"></script>
+    <script src="js/js.js"></script>
+
+    
 </body>
 </html>

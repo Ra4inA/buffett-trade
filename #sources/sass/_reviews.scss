@@ -1,0 +1,166 @@
+
+.reviews {
+    padding: 75px 0;
+    &_container {
+    }
+    &__title {
+        margin-bottom: 4px;
+        text-align: center;
+    }
+    &__text {
+        margin-bottom: 43px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &__cards {
+        margin-bottom: 36px;
+    }
+
+    &__btn {
+        font-weight: 400;
+        line-height: 24px;
+        padding: 5px 30px;
+        display: block;
+        margin: 0 auto;
+        
+    }
+}
+
+
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+
+    &_active {
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .cards__item {
+                flex: 0 1 calc(50% - 68px);
+                margin-bottom: 50px;
+            }
+
+            .review-card:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            .review-card:nth-child(4n+3),
+            .review-card:nth-child(4n+4) {
+                .review-card__column_1 {
+                    order: 2;
+                    margin-right: 0;
+                    margin-left: 30px;
+                }
+            }
+                
+                
+            
+        }
+        
+    }
+    &__row {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 27px;
+        transform: translateX(-50px);
+        width: 120%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_1 {
+            
+        }
+
+        &_2 {
+            .review-card__column:first-child {
+                order: 2;
+
+                margin-left: 30px;
+                &:first-child {
+                margin-right: 0;
+            }
+
+       
+        }
+            
+        }
+    }
+
+    &__item {
+        margin-right: 58px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.review-card {
+    display: flex;
+    justify-content: space-between;
+    // flex: 0 1 50%;
+    // max-width: calc(50% - 27px);
+    width: 100%;
+    max-width: 500px;
+    max-height: 375px;
+
+    &__column {
+        flex: 1 1 calc(50% - 30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+
+
+        &_1 {
+            flex: 0 0 45%;
+        }
+        &_2 {
+            flex: 0 0 55%;
+        }
+
+    }
+
+
+    &__img-wrapper_long {
+    }
+    
+    &__img-wrapper_short {
+
+    }
+}
+
+
+
+.review-card-colunm {
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .cards__item {
+        margin-right: 30px;
+    }
+    .cards__row {
+        margin-bottom: 11px;
+    }
+    .review-card__column {
+        margin-right: 15px;
+    }
+
+    .cards__row_2 .review-card__column:first-child {
+        margin-left: 15px;
+    }
+    
+}
