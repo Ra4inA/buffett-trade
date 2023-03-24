@@ -135,6 +135,8 @@ a, a:hover, a:active{
 	font-weight: 700;
 	font-size: 29px;
 
+	transition: all $transition-time ease;
+
 
 	color: $bright;
 	
@@ -217,3 +219,60 @@ a, a:hover, a:active{
 
 
 
+._anim-delay_02 {
+	transition-delay: .2s;
+}
+._anim-delay_04 {
+	transition-delay: .4s;
+}
+._anim-delay_08 {
+	transition-delay: .6s;
+}
+
+._animate {
+	transition: all 0.5s ease;
+	opacity: 0;
+}
+
+._animate-left {
+	transform: translateX(-100px);
+}
+
+._animate-right {
+	transform: translateX(100px);
+}
+._animate-bottom {
+	transform: translateY(100%);	
+}
+._animate-top {
+	transform: translateY(-100%);	
+}
+._animate-Active {
+	transform: translateX(0);
+	transform: translate(0);
+	opacity: 1;
+}
+
+
+.layer0 {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background-color: #3B3E45;
+	z-index: 10;
+	opacity: 1;
+
+}
+
+.layer0._animate {
+	
+	transform: translateY(0);
+	transition: all 1s cubic-bezier(.18,.94,.48,-0.01);
+
+}
+
+.layer0._animate-Active {
+	transform: translateY(100%);
+	opacity: 1;
+
+}

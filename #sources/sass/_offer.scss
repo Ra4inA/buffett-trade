@@ -120,13 +120,30 @@
         position: absolute;
         top: 0;
         left: 0;
+
+        background-image: url('../img/poster.webp');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+
+        
+        transition: all $transition-time ease;
+
+        &:hover {
+            font-size: 70px;
+            background-size: 105%;
+        }
+       
     }
     &__btn {
         position: absolute;
         bottom: 0;
         margin-bottom: 29px;
-        display: none;
+        opacity: 0;
         z-index: 3;
+
+        transition: all $transition-time ease;
     }
 }
 

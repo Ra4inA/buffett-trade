@@ -12,7 +12,7 @@
     &__timer {
         position: absolute;
         left: 0;
-        margin-top: 20px;
+        
         
 
     }
@@ -64,6 +64,8 @@
         background-color: $bright;
         border-radius: 30px;
         z-index: -1;
+
+        transition: all $transition-time ease;
     }
 
     &__ratio {
@@ -100,11 +102,6 @@
     }
 }
 
-._right {
-    right: 0;
-    left: auto;
-
-}
 
 
 .tariffs {
@@ -190,6 +187,7 @@
     &__btn {
         
         background-color: #fff;
+        border: 1px #fff solid;
         color: #070A11;
         padding: 10px 40px;
         font-weight: 700;
@@ -197,6 +195,12 @@
 
         margin: 35px auto 0 auto;
         display: block;
+        transition: all $transition-time ease;
+
+        &:hover {
+            background-color: transparent;
+            color: #fff;
+        }
     }
 }
 
@@ -303,8 +307,13 @@
         padding: 50px 0 35px 0;
         overflow: hidden;
 
+        &__timer {
+            margin-top: 20px;
+        }
+
         &__slider {
             max-width: 335px;
+            margin: 0 auto;
 
             .slick-track {
             }
@@ -324,8 +333,18 @@
 
         &__bg {
             width: 110px;
+            left: 0;
         }
+
+        
+        }
+        
     }
+
+    ._bg_right {
+        left: 100%;
+        transform: translateX(-100%);
+    
 
     .prices__title {
         text-align: left;

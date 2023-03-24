@@ -2,7 +2,7 @@
 isSail = false
 $(window).on('load', function() {
   setTimeout(function(){
-    lastDay = 24
+    lastDay = 23
     setInterval(function(){
       time = $('#Moscow_z71d span:first-child').html();
       date = $('#Moscow_z71d span:last-child').html();
@@ -79,7 +79,7 @@ $('#offerVideoPlay').on('click', function() {
     $('.video').removeClass('_playing')
     video.pause();
 
-    $('.video__btn').css('display', 'none')
+    $('.video__btn').css('opaciy', '0')
   } else {
     $('#offerVideoPlay').css('opacity', '0')
     video.play();
@@ -90,35 +90,24 @@ $('#offerVideoPlay').on('click', function() {
 
   
 });
-
-$(window).on('load', function() {
-  if ($(window).width() < 768) {
-    // Offer btn
-    $('.offer__btn').text('How it works?')
-    // Partners slider
-      $('.partners__slider').slick({
-        centerMode: true,
-        infinite: true,
-        
-        cssEase: 'ease',
-        autoplay: true,
-        autoplaySpeed: 1000,
-        
-
-        prevArrow: "<i class='icon-slick-arrow prev'></i>",
-        nextArrow: "<i class='icon-slick-arrow next'></i>",
-
-        slidesToShow: 1,
-      });
-      
-      $('.partners__slider .slick-track').css('align-items', 'center')
-      
-  } else {
-      $('.partners__slider').slick("unslick");
-  };
-
+  // Offer btn
+$('.offer__btn').text('How it works?')
   
-});
+
+
+// Partners slider
+  // $('.partners__slider').slick({
+  //   centerMode: true,
+  //   infinite: true,
+    
+  //   cssEase: 'linear',
+  //   autoplay: true,
+  //   autoplaySpeed: 0,
+  //   speed: 1000,
+    
+
+  //   slidesToShow: 1,
+  // });
 
 // Team slider
 $('.team-slider').slick({
@@ -203,7 +192,7 @@ $('.student__btn').on('click', function(){
 
 $(".prices__tab-swither input").on("change", function(){
   if (($('input[name="prices-tabs"][value="2"]').is(":checked"))) {
-    $('.tab-swither__bg').addClass('_right')
+    $('.tab-swither__bg').addClass('_bg_right')
     $('.tab-swither__bg').css('width', '180px')
 
     if($(window).width() < 769) {
@@ -214,27 +203,21 @@ $(".prices__tab-swither input").on("change", function(){
       $('#tariffs-standard').removeClass('_active');
       $('#tariffs-vip').addClass('_active');
     
-      $('#tariffs-standard').addClass('_d-none');
-    
-
-      $('#tariffs-vip').removeClass('_d-none');
+      $('#tariffs-standard').fadeOut(100)
+      $('#tariffs-vip').fadeIn(1000);
     } else {
       $('.tab-swither__bg').css('width', '225px')
 
       if($(window).width() < 769) {
         $('.tab-swither__bg').css('width', '110px')
       }
-      $('.tab-swither__bg').removeClass('_right')
+      $('.tab-swither__bg').removeClass('_bg_right')
       $('#tariffs-standard').addClass('_active')
       $('#tariffs-vip').removeClass('_active')
       $('.label_1').css('font-weight', '700')
       $('.label_2').css('font-weight', '400')
-      
-    $('#tariffs-standard').removeClass('_d-none');
-  
-    
-    
-    $('#tariffs-vip').addClass('_d-none');
+      $('#tariffs-standard').fadeIn(1000)
+    $('#tariffs-vip').fadeOut(100);
     
     };
 });
@@ -296,7 +279,7 @@ $(window).on('load', function() {
 
 setTimeout(function () {
   
-  $('#tariffs-vip').delay(1000).addClass('_d-none');
+  $('#tariffs-vip').delay(1000).fadeOut();
   $('input[name="prices-tabs"][value="1"]').trigger('click');
 }, 2000)
 
@@ -315,41 +298,48 @@ if ($(window).width() < 768) {
   });
 }
 
+windowWidth = $(window).width()
 $('#reviews__btn').on('click', function() {
-  
-    
-    if($(this).hasClass('reviews__btn_active')) {
-      $(this).text('look closer')
-      $(this).removeClass('reviews__btn_active')
+  $('.layer0').css('transform', 'translateY(0)')
+    setTimeout(function() {
 
-
-      if($(window).width() > 768) {
-        $('.row_1').appendTo('.cards__row_1')
-        $('.row_2').appendTo('.cards__row_2')
-        $('.row_3').appendTo('.cards__row_3')
-      } else {
-        $('.cards_mob__slider').addClass('_d-none')
-        $('.reviews__cards').removeClass('_d-none')
-      }
+      if($('#reviews__btn').hasClass('reviews__btn_active')) {
+        $('#reviews__btn').text('look closer')
+        $('#reviews__btn').removeClass('reviews__btn_active')
         
 
-    } else {
-
-      
-      
-      $(this).addClass('reviews__btn_active')
-
-      if($(window).width() > 768) {
-        $(this).text('hide')
-      $('.cards').addClass('cards_active')
-      $('.review-card').appendTo('.cards__container')
+        if(windowWidth > 768) {
+          $('.row_1').appendTo('.cards__row_1')
+          $('.row_2').appendTo('.cards__row_2')
+          $('.row_3').appendTo('.cards__row_3')
+        } else {
+          $('.cards_mob__slider').addClass('_d-none')
+          $('.reviews__cards').removeClass('_d-none')
+        }
+          
+  
       } else {
-        $(this).text('back')
-        $('.reviews__cards').addClass('_d-none')
-        $('.cards_mob__slider').removeClass('_d-none')
-      }
-    }  
-  });
+  
+        
+        
+        $('#reviews__btn').addClass('reviews__btn_active')
+  
+        if(windowWidth > 768) {
+          $('#reviews__btn').text('hide')
+        $('.cards').addClass('cards_active')
+        $('.review-card').appendTo('.cards__container')
+        } else {
+          $('#reviews__btn').text('back')
+          $('.reviews__cards').addClass('_d-none')
+          $('.cards_mob__slider').removeClass('_d-none')
+        }
+      } 
+      $('.layer0').css('transform', 'translateY(100%)') 
+    },1500);
+    }),
+
+    
+   
 
   setTimeout(function () {
   
@@ -370,3 +360,20 @@ $(window).on('load', function() {
     }
   });
 
+
+
+
+  // ANIMATE 
+
+    const animItems = document.querySelectorAll("._animate");
+    $(window).scrollTop(2);
+    $(window).on("scroll", function(){
+    for (let index = 0; index < animItems.length; index++){
+        if($(window).scrollTop() + $(window).height() > $(animItems[index]).offset().top + $(animItems[index]).height() / 2 
+            & $(window).scrollTop() < $(animItems[index]).offset().top + $(animItems[index]).height() / 2){
+            $(animItems[index]).addClass("_animate-Active");
+        } else {
+            if($(animItems[index]).hasClass("_anim-no-hide") !== true){$(animItems[index]).removeClass("_animate-Active");}
+        };
+    };
+});
