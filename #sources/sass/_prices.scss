@@ -12,9 +12,6 @@
     &__timer {
         position: absolute;
         left: 0;
-        
-        
-
     }
     
     &__title {
@@ -25,25 +22,29 @@
 
 
 .timer {
-    position: relative;
+    position: absolute;
     border-radius: 30px;
     border: 1px solid $bright;
     padding: 0px 30px;
-    width: 395px;
+    width: 100%;
+    max-width: 395px;
 
-    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
     &__time {
+        display: block;
         width: 200px;
         font-size: 50px;
         line-height: 72px;
         margin-right: 5px;
+        font-weight: 400;
     }
     &__text {
+        font-weight: 700;
         width: 167px;
-        position: absolute;
-        right: 0;
-        top: 48%;
-        transform: translateY(50%);
     }
 }
 .tab-swither {
@@ -312,6 +313,8 @@
             margin-top: 20px;
         }
 
+        
+
         &__slider {
             max-width: 335px;
             margin: 0 auto;
@@ -322,6 +325,10 @@
                 overflow: visible;
             }
 
+
+            .slick-track {
+                display: flex !important;
+            }
             .slick-slide {
                
                 display: flex !important;
@@ -329,6 +336,21 @@
                 justify-content: space-between;
             }
         }
+    
+    .timer {
+
+        &__time {
+            font-size: 35px;
+            width: auto;
+            text-align: right;
+        }
+        &__text {
+            max-width: 125px;
+            order: -1;
+            text-align: center;
+        }
+    }
+
     }
 
 
@@ -355,6 +377,7 @@
         padding-left: 20px;
     }
     .timer {
+
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;

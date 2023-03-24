@@ -96,18 +96,32 @@ $('.offer__btn').text('How it works?')
 
 
 // Partners slider
-  // $('.partners__slider').slick({
-  //   centerMode: true,
-  //   infinite: true,
+  $('.partners__slider').slick({
+    centerMode: true,
+    infinite: true,
     
-  //   cssEase: 'linear',
-  //   autoplay: true,
-  //   autoplaySpeed: 0,
-  //   speed: 1000,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 1000,
     
 
-  //   slidesToShow: 1,
-  // });
+    slidesToShow: 7,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+       {
+        breakpoint: 512,
+        settings: {
+          slidesToShow: 1,
+        }
+      }],
+    });
 
 // Team slider
 $('.team-slider').slick({
@@ -174,13 +188,12 @@ $('.student__btn').on('click', function(){
   if($(this).hasClass('student__btn_active')) {
     $(this).removeClass('student__btn_active')
     $(this).text('more')
-    $(this).css('bottom', '-15px')
+    $(this).removeClass('student__btn_active')
     $(this).parent().removeClass('student__content_active')
 
 
   } else {
     $(this).addClass('student__btn_active')
-    $(this).css('bottom', '15px')
     $(this).text('hide')
     $(this).parent().addClass('student__content_active')
   }
@@ -269,9 +282,6 @@ $(window).on('load', function() {
             }
           }],
           });
-    } else {
-    
-      $('.partners__slider').slick("unslick");
     };
   
   

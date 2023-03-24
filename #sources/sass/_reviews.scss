@@ -83,6 +83,7 @@
             margin-bottom: 0;
         }
 
+
         &_1 {
             
         }
@@ -100,6 +101,11 @@
         }
             
         }
+
+    }
+    
+    .cards__row_2 {
+        transform: translateX(-40px);
     }
 
     &__item {
@@ -196,8 +202,7 @@
     }
     
     &__img-wrapper_short {
-        margin-top: 20px;
-
+        
     }
 }
 

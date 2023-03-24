@@ -1,6 +1,7 @@
 .partners {
     padding: 80px 10px;
-    
+    overflow: hidden;
+
     &__title {
         @include adaptiv-font(29, 20, 31, 25);
         text-align: center;
@@ -10,14 +11,24 @@
 
 
 .partners-list {
+
+    .slick-list {
+        
+        overflow: visible;
+    }
+    .slick-track{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    // max-width: 1;
+    overflow: visible;
     .slick-arrow {
         opacity: 0;
         pointer-events: none;
         font-size: 0;
     }
 
-    display: flex;
-    align-items: center;
     margin: 0 auto;
     &__item {
         margin: 0 10px;
@@ -42,15 +53,8 @@
     &__img {    
         object-fit: contain;
     }
-    .slick-list {
-        overflow: visible;
-    }
-    .slick-track{
-        display: flex !important;
-        align-items: center;
-        
-    }
     
+   
 }
 
 
@@ -64,17 +68,14 @@
             font-weight: 400;
             margin-bottom: 34px;
         }
+    }
 
-        &__list {
-            max-width: 250px;      
+    .partners-list {
+        &__item {
+            
         }
     }
-
-    
-
-        
-    }
-
+}
 
     
     

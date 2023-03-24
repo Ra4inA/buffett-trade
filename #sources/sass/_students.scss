@@ -190,6 +190,7 @@
     
             }
         }
+
         &::before {
             z-index: 10;
             right: 0;
@@ -222,12 +223,15 @@
 
         }
     }
-
-
-    
-
-    
 }
+
+.student__btn_active {
+    position: relative !important;
+    top: -0px;
+    z-index: 10;
+    display: block;
+}
+
 @media screen and (max-width: 992px) {
     .students {
         padding: 42px 0 0 0;
