@@ -25,13 +25,11 @@
 
 
 .timer {
+    position: relative;
     border-radius: 30px;
     border: 1px solid $bright;
     padding: 0px 30px;
     width: 395px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     font-weight: 700;
     &__time {
@@ -41,8 +39,11 @@
         margin-right: 5px;
     }
     &__text {
-        flex: 0 0 50%;
-        margin-right: -5px;
+        width: 167px;
+        position: absolute;
+        right: 0;
+        top: 48%;
+        transform: translateY(50%);
     }
 }
 .tab-swither {
@@ -314,8 +315,11 @@
         &__slider {
             max-width: 335px;
             margin: 0 auto;
+            box-sizing: content-box;
+            padding: 0 10px;
 
-            .slick-track {
+            .slick-list {
+                overflow: visible;
             }
 
             .slick-slide {

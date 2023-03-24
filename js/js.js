@@ -364,16 +364,22 @@ $(window).on('load', function() {
 
 
   // ANIMATE 
-
+ 
     const animItems = document.querySelectorAll("._animate");
-    $(window).scrollTop(2);
-    $(window).on("scroll", function(){
-    for (let index = 0; index < animItems.length; index++){
-        if($(window).scrollTop() + $(window).height() > $(animItems[index]).offset().top + $(animItems[index]).height() / 2 
-            & $(window).scrollTop() < $(animItems[index]).offset().top + $(animItems[index]).height() / 2){
-            $(animItems[index]).addClass("_animate-Active");
-        } else {
-            if($(animItems[index]).hasClass("_anim-no-hide") !== true){$(animItems[index]).removeClass("_animate-Active");}
+
+    function animate(){
+      for (let index = 0; index < animItems.length; index++){
+          if($(window).scrollTop() + $(window).height() > $(animItems[index]).offset().top + $(animItems[index]).height() / 2 
+              & $(window).scrollTop() < $(animItems[index]).offset().top + $(animItems[index]).height() / 2){
+              $(animItems[index]).addClass("_animate-Active");
+          } else {
+              if($(animItems[index]).hasClass("_anim-no-hide") !== true){$(animItems[index]).removeClass("_animate-Active");}
+          };
         };
-    };
-});
+      
+      };
+    
+    animate();
+    $(window).on("scroll", function() {
+      animate()
+    });

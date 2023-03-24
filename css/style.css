@@ -1578,19 +1578,11 @@ a, a:hover, a:active {
 }
 
 .timer {
+  position: relative;
   border-radius: 30px;
   border: 1px solid #F5F3EE;
   padding: 0px 30px;
   width: 395px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-weight: 700;
 }
 .timer__time {
@@ -1600,10 +1592,12 @@ a, a:hover, a:active {
   margin-right: 5px;
 }
 .timer__text {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  margin-right: -5px;
+  width: 167px;
+  position: absolute;
+  right: 0;
+  top: 48%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .tab-swither {
@@ -1861,6 +1855,12 @@ a, a:hover, a:active {
   .prices__slider {
     max-width: 335px;
     margin: 0 auto;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    padding: 0 10px;
+  }
+  .prices__slider .slick-list {
+    overflow: visible;
   }
   .prices__slider .slick-slide {
     display: -webkit-box !important;
