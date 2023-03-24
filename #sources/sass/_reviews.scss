@@ -127,11 +127,14 @@
     &:nth-child(2n) {
         .review-card-mob__img-wrapper_short {
             order: -1;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
     }
 
 }
 .cards__item_mob {
+    margin: 0 10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -139,7 +142,7 @@
     
 }
 .review-card-mob__img-wrapper {
-    margin: 20px;
+    
     
 
 }
@@ -193,6 +196,7 @@
     }
     
     &__img-wrapper_short {
+        margin-top: 20px;
 
     }
 }

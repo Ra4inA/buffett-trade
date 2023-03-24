@@ -2031,9 +2031,12 @@ a, a:hover, a:active {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .cards__item_mob {
+  margin: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2042,10 +2045,6 @@ a, a:hover, a:active {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.review-card-mob__img-wrapper {
-  margin: 20px;
 }
 
 .review-card-mob__img-wrapper_long {
@@ -2107,6 +2106,10 @@ a, a:hover, a:active {
       -ms-flex: 0 0 55%;
           flex: 0 0 55%;
 }
+.review-card__img-wrapper_short {
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .reviews {
     padding: 42px 0 55px 0;
